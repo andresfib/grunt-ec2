@@ -23,7 +23,7 @@ module.exports = {
         //Cluster mode not stable with node 10. Using fork
 //        return util.format('%s || sudo %s pm2 start %s/%s -i %s --name %s || echo "pm2 already started."',
 //            running, parse.toPairs(env), conf('SRV_CURRENT'), conf('NODE_SCRIPT'), conf('PM2_INSTANCES_COUNT'), name
-        );
+//        );
         //We use fork meanwhile
         return util.format('%s || sudo %s pm2 start %s/%s --name %s || echo "pm2 already started."',
             running, parse.toPairs(env), conf('SRV_CURRENT'), conf('NODE_SCRIPT'), name);    }
